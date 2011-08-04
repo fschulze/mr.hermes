@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1 - 2011-08-04
+----------------
+
+* Fix packaging issue which basically made 1.0 a brownbag release.
+  [fschulze]
+
+
 1.0 - 2011-08-04
 ----------------
 

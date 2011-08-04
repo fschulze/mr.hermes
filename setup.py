@@ -1,7 +1,7 @@
 import os
 from setuptools import setup
 
-version = "1.0"
+version = "1.1"
 
 setup(
     name='mr.hermes',
@@ -12,7 +12,7 @@ setup(
     author='Florian Schulze',
     author_email='florian.schulze@gmx.net',
     url='http://github.com/fschulze/mr.hermes',
-    packages=['mr'],
+    packages=['mr', 'mr.hermes'],
     namespace_packages=['mr'],
     zip_safe=True,
     install_requires=[
