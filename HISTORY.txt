@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.2 - 2013-07-22
+----------------
+
+* Make sure mails are sorted properly when filenames conflict.
+  [dokai (Kai Lautaportti), fschulze]
+
+
 1.1 - 2011-08-04
 ----------------
 
@@ -12,4 +19,4 @@ Changelog
 ----------------
 
 * Initial release
-  [fschulze]
+  [fschulze (Florian Schulze)]
