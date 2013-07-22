@@ -26,7 +26,7 @@ class DebuggingServer(smtpd.DebuggingServer):
             while os.path.exists(dest):
                 if index > 1000:
                     raise IOError("Tried too many filenames like: %s" % dest)
-                dest = os.path.join(path, "%s-%s.eml" % (filename, index))
+                dest = os.path.join(path, "%s_%s.eml" % (filename, index))
                 index = index + 1
             with open(dest, "w") as f:
                 f.write(data)
