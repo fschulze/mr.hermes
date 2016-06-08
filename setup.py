@@ -11,6 +11,7 @@ setup(
                      open(os.path.join("HISTORY.txt")).read(),
     author='Florian Schulze',
     author_email='florian.schulze@gmx.net',
+    license="MIT",
     url='http://github.com/fschulze/mr.hermes',
     packages=['mr', 'mr.hermes'],
     namespace_packages=['mr'],
