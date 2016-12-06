@@ -1,6 +1,15 @@
 Changelog
 =========
 
+1.3.0 - 2016-12-06
+------------------
+
+* Added ``*args`` and ``**kwargs`` in ``mr.hermes.DebugginServer.__init__`` to
+  accept the new (even if unused) parameters introduced in Python 3.3 and 3.4
+  and used when running the smtp module from cli.
+  [duploduplo (Lorenzo Berni)]
+
+
 1.2 - 2013-07-22
 ----------------
 
