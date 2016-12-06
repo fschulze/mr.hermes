@@ -5,11 +5,12 @@ import time
 
 
 class DebuggingServer(smtpd.DebuggingServer):
-    def __init__(self, localaddr, remoteaddr):
+    def __init__(self, localaddr, remoteaddr, *args, **kwargs):
         self.path = os.environ.get('DEBUG_SMTP_OUTPUT_PATH')
         if self.path is None:
             print >>sys.stderr, "DEBUG_SMTP_OUTPUT_PATH not set, dumping mails to stdout only."
-        smtpd.DebuggingServer.__init__(self, localaddr, remoteaddr)
+        smtpd.DebuggingServer.__init__(
+            self, localaddr, remoteaddr, *args, **kwargs)
 
     def process_message(self, peer, mailfrom, rcpttos, data):
         smtpd.DebuggingServer.process_message(self, peer, mailfrom, rcpttos, data)
