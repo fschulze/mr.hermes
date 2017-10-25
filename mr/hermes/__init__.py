@@ -13,7 +13,7 @@ class DebuggingServer(smtpd.DebuggingServer):
         smtpd.DebuggingServer.__init__(
             self, localaddr, remoteaddr, *args, **kwargs)
 
-    def process_message(self, peer, mailfrom, rcpttos, data):
+    def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
         smtpd.DebuggingServer.process_message(self, peer, mailfrom, rcpttos, data)
         sys.stdout.flush()
         if self.path is None:
