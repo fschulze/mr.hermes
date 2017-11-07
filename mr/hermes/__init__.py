@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 import smtpd
 import sys
@@ -8,7 +9,7 @@ class DebuggingServer(smtpd.DebuggingServer):
     def __init__(self, localaddr, remoteaddr, *args, **kwargs):
         self.path = os.environ.get('DEBUG_SMTP_OUTPUT_PATH')
         if self.path is None:
-            print >>sys.stderr, "DEBUG_SMTP_OUTPUT_PATH not set, dumping mails to stdout only."
+            print("DEBUG_SMTP_OUTPUT_PATH not set, dumping mails to stdout only.", file=sys.stderr)
         smtpd.DebuggingServer.__init__(
             self, localaddr, remoteaddr, *args, **kwargs)
 
