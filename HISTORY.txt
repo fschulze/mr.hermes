@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.4.0 - 2017-11-08
+------------------
+
+* Fixes for Python 3.6.
+  [dokai (Kai Lautaportti), fschulze]
+
+
 1.3.0 - 2016-12-06
 ------------------
 
