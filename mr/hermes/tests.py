@@ -32,7 +32,7 @@ def debugsmtp_thread(debugsmtp):
 def sendmail(debugsmtp, debugsmtp_thread):
     def sendmail(msg):
         import smtplib
-        (host, port) = debugsmtp.socket.getsockname()
+        (host, port) = debugsmtp.socket.getsockname()[:2]
         s = smtplib.SMTP(host, port)
         s.sendmail(msg['From'], [msg['To']], msg.as_string())
         s.quit()
