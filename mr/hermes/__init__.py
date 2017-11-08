@@ -31,4 +31,6 @@ class DebuggingServer(smtpd.DebuggingServer):
                 dest = os.path.join(path, "%s_%s.eml" % (filename, index))
                 index = index + 1
             with open(dest, "w") as f:
+                if isinstance(data, bytes):
+                    data = data.decode('ascii')
                 f.write(data)
